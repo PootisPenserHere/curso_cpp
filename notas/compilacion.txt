@@ -1,0 +1,13 @@
+La compilcacion basica se hace desde la raiz del proyecto pasando al comando g++ el nombre del archivo con el main
+
+Opcionalmente es posible pasara el argumento -o seguido de un nombre el cual se usara para el nombre del output del compilado de no ser pasado se tomara un nombre default el cual es "a"
+
+Para canbiar de version de estandar se puede pasar el argumento -std
+-std=c++11    para la version 2011
+
+Para compiar programa con multiples archivos cpp
+Se deben agrgear todos los archivos al comando de compilacion, los .h no son necesarios
+g++ main.cpp saludo.cpp
+
+Al tener multiples archivos cpp cada uno se compila en un .o por lo que podria solo compilarse aquellos
+que han sido modificados
