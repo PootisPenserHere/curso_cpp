@@ -6,11 +6,12 @@ using namespace std;
 
 class CRectangulo{
     private:
+        static int contador;
         int base;
         int altura;
         string nombre;
     public:
-        static int contador;
+        //static int contador; // Si se utiliza aqui se puede llamar sin usar metodos
         ~CRectangulo(); // Destructor
 
         //Constructores
@@ -18,8 +19,9 @@ class CRectangulo{
         CRectangulo();
         CRectangulo(string str);
         CRectangulo(int b, int a, string str);
-        
+
         void print();
+        static int getContador();
 };
 
 #endif

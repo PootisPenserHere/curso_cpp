@@ -6,6 +6,10 @@
 */
 int CRectangulo::contador = 0;
 
+int CRectangulo::getContador(){
+    return contador;
+}
+
 /**
 * Destructor
 *
