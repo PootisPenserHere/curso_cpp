@@ -1,6 +1,12 @@
 #include <iostream>
+#include "CBloque.h"
+#include "CResize.h"
 
-using namescape std;
+using namespace std;
+
+void pintar(CBloque &b, string color){
+    b.color = color;
+}
 
 int main()
 {
@@ -19,5 +25,6 @@ int main()
 
     CResize::resize(b3, 30);
     b3.print(); // bloque: rojo, 30
+
     return 0;
 }
