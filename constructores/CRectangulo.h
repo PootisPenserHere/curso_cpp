@@ -10,11 +10,15 @@ class CRectangulo{
         int altura;
         string nombre;
     public:
+        static int contador;
         ~CRectangulo(); // Destructor
+
+        //Constructores
         CRectangulo(int b, int a);
         CRectangulo();
         CRectangulo(string str);
         CRectangulo(int b, int a, string str);
+        
         void print();
 };
 

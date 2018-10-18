@@ -1,12 +1,19 @@
 #include "CRectangulo.h"
 
 /**
+* Este elemento estatico se utilizara para llevar un contador de la veces que se
+* ha instanciado la clase
+*/
+int CRectangulo::contador = 0;
+
+/**
 * Destructor
 *
 * Se ejecutara al terminar el contexto en que la clase fue invocada
 */
 CRectangulo::~CRectangulo(){
     cout << "Destruyendo a " << nombre << endl;
+    contador--;
 }
 
 // Constructor basico
@@ -14,6 +21,7 @@ CRectangulo::CRectangulo(int b, int a){
     base = b;
     altura = a;
     nombre = "sin nombre";
+    contador++;
 }
 
 // Sobre carga de constructor
@@ -21,12 +29,15 @@ CRectangulo::CRectangulo(){
     base = 0;
     altura = 0;
     nombre = "sin nombre";
+    contador++;
 }
 
 /**
 * Inicializa los valores antes de crear el objecto
 */
-CRectangulo::CRectangulo(string str):base(0), altura(0), nombre(str){}
+CRectangulo::CRectangulo(string str):base(0), altura(0), nombre(str){
+    contador++;
+}
 
 /**
 * Inicializacion de atributos en contecto de clase
@@ -42,6 +53,7 @@ CRectangulo::CRectangulo(string str):base(0), altura(0), nombre(str){}
 CRectangulo::CRectangulo(int base, int altura, string nombre):nombre(nombre){
     this->base = base;
     this->altura = altura;
+    contador++;
 
 }
 
