@@ -22,6 +22,14 @@ class CRectangulo{
 
         void print();
         static int getContador();
+
+        /**
+        * Friends
+        *
+        * No requieren existir, pero si estan declaradas e intentan acceder a algun
+        * atributo o metodo privado se les dara accesso
+        */
+        friend void reducir(CRectangulo &rec);
 };
 
 #endif

@@ -3,6 +3,17 @@
 
 using namespace std;
 
+/**
+* Podra acceder a los metodos y atributos de la clase CRectangulo
+* al ser friends
+*/
+void reducir(CRectangulo &rec){
+    rec.base /= 2;
+    rec.altura /= 2;
+}
+
+
+
 int main()
 {
     // No se requiere instancia de la clase para referenciarla
@@ -18,6 +29,9 @@ int main()
     rec.print();
     rec2.print();
     rec3.print();
+    rec4.print();
+
+    reducir(rec4);
     rec4.print();
 
     return 0;
