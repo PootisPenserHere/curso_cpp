@@ -12,7 +12,17 @@ void reducir(CRectangulo &rec){
     rec.altura /= 2;
 }
 
+class CCuadrado{
+    public:
+        void convertir(CRectangulo &rec){
+            rec.base = rec.altura;
+        }
 
+        static void print(CRectangulo const &rec){
+            cout << "Desde cuadrado: " << rec.nombre << " - ";
+            cout << rec.base << "x" << rec.altura << endl;
+        }
+};
 
 int main()
 {
@@ -31,8 +41,14 @@ int main()
     rec3.print();
     rec4.print();
 
+    cout << "Reduciendo" << endl;
     reducir(rec4);
     rec4.print();
+
+    cout << "Cuadrado" << endl;
+    CCuadrado cuadro;
+    cuadro.convertir(rec4);
+    CCuadrado::print(rec4); // Usando el metodo static
 
     return 0;
 }

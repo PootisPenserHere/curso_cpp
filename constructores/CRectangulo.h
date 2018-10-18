@@ -30,6 +30,7 @@ class CRectangulo{
         * atributo o metodo privado se les dara accesso
         */
         friend void reducir(CRectangulo &rec);
+        friend class CCuadrado;
 };
 
 #endif
