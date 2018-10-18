@@ -10,6 +10,7 @@ class CRectangulo{
         int altura;
         string nombre;
     public:
+        ~CRectangulo(); // Destructor
         CRectangulo(int b, int a);
         CRectangulo();
         CRectangulo(string str);

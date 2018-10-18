@@ -1,5 +1,14 @@
 #include "CRectangulo.h"
 
+/**
+* Destructor
+*
+* Se ejecutara al terminar el contexto en que la clase fue invocada
+*/
+CRectangulo::~CRectangulo(){
+    cout << "Destruyendo a " << nombre << endl;
+}
+
 // Constructor basico
 CRectangulo::CRectangulo(int b, int a){
     base = b;
